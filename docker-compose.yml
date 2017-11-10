@@ -25,7 +25,7 @@ services:
 
   raffler-frontend-php7fpm-dev:
     container_name: raffler-frontend-php7fpm-dev
-    image: msvrtan/raffler-frontend-php7fpm-dev:0.4.1
+    image: msvrtan/php7fpm-dev:0.4.1
     shm_size: 256MB
     volumes_from:
       - raffler-frontend-code
@@ -44,7 +44,7 @@ services:
 
   raffler-frontend-php7fpm-test:
     container_name: raffler-frontend-php7fpm-test
-    image: msvrtan/raffler-frontend-php7fpm-dev:0.4.1
+    image: msvrtan/php7fpm-dev:0.4.1
     shm_size: 256MB
     volumes_from:
       - raffler-frontend-code
@@ -68,7 +68,7 @@ services:
     volumes_from:
       - raffler-frontend-code
     links:
-      - raffler-frontend-nginx-dev
+      - raffler-frontend-nginx
     extra_hosts:
       - "dev.frontend-raffler.loc:172.17.0.1"
       - "test.frontend-raffler.loc:172.17.0.1"

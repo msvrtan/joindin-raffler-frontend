@@ -66,9 +66,9 @@ services:
     image: msvrtan/workspace-dev:0.5.0
     shm_size: 256MB
     volumes_from:
-      - code
+      - raffler-frontend-code
     links:
-      - nginx-dev
+      - raffler-frontend-nginx-dev
     extra_hosts:
       - "dev.frontend-raffler.loc:172.17.0.1"
       - "test.frontend-raffler.loc:172.17.0.1"
@@ -83,7 +83,7 @@ services:
     image: msvrtan/xdebug-dev:0.4.1
     shm_size: 256MB
     volumes_from:
-      - code
+      - raffler-frontend-code
     extra_hosts:
       - "dev.frontend-raffler.loc:172.17.0.1"
       - "test.frontend-raffler.loc:172.17.0.1"
